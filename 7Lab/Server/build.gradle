@@ -1,0 +1,52 @@
+plugins {
+    id 'java'
+    id 'application'
+    id 'com.github.johnrengelman.shadow' version '8.1.1' // gradle clean shadowJar
+}
+
+// spotless {
+//     java {
+//         googleJavaFormat('1.17.0')
+//         // trimTrailingWhitespace()
+//         // endWithNewline()
+//     }
+// }
+
+java {
+    toolchain {
+        languageVersion = JavaLanguageVersion.of(17)
+    }
+}
+
+tasks.withType(JavaCompile) {
+    options.release.set(17)
+}
+
+repositories {
+    mavenCentral() // Для добавления зависимостей
+}
+
+dependencies {
+    implementation project(':NetworkPackage')
+    implementation 'org.slf4j:slf4j-api:2.0.9'
+    implementation 'ch.qos.logback:logback-classic:1.4.11'
+    implementation fileTree(dir: 'libs', include: ['*.jar'])
+}
+
+application {
+    mainClass = 'Server.Main'
+}
+
+run {
+    standardInput = System.in
+}
+
+jar {
+  manifest {
+    attributes 'Main-Class': application.mainClass
+  }
+}
+
+shadowJar {
+    mergeServiceFiles()
+}

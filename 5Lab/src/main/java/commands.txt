@@ -1,0 +1,4 @@
+show
+d
+help
+execute_script ./commands.txt

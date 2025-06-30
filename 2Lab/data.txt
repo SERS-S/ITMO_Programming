@@ -1,0 +1,8 @@
+javac -cp .:Pokemon.jar -d bin Main.java pockemons/*.java moves/*.java
+
+java -cp bin:Pokemon.jar Main
+
+
+javac -cp .:Pokemon.jar -d bin Main.java pockemons/*.java moves/*.java && java -cp bin:Pokemon.jar Main
+
+javac -cp .:Pokemon.jar -d bin Main.java pockemons/*.java moves/*.java && java -cp bin:Pokemon.jar Main Diencie_2_Ally Shelmet_2_Ally Accelgor_2_Ally Oddish_2_Foe Gloom_2_Foe Vileplume_2_Foe

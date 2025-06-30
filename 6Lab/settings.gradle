@@ -1,0 +1,9 @@
+rootProject.name = '6Lab'
+include 'Server', 'Client', 'NetworkPackage'
+
+dependencyResolutionManagement {
+    repositories {
+        mavenCentral()
+        gradlePluginPortal()
+    }
+}
