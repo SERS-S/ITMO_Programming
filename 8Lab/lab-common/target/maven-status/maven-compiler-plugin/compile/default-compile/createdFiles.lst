@@ -1,0 +1,10 @@
+moduls/TicketType.class
+moduls/Ticket.class
+moduls/Coordinates.class
+moduls/Person.class
+network/Pack.class
+moduls/HairColor.class
+moduls/Country.class
+network/Request.class
+network/Response.class
+moduls/EyeColor.class

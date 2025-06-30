@@ -1,0 +1,8 @@
+name,coordinates,health,loyal,achievements,weaponType,chapter
+firts,second,third
+{8;3.4},{3;2.3},{4;5.6}
+3.2,2.7,null
+false,true,true
+colonel,major,captain
+BOLTGUN,GRAV_GUN,COMBI_FLAMER
+{mars;vulcan_olimp},{moon;east_sea},{earth;russia}
